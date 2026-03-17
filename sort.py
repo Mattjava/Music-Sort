@@ -1,5 +1,5 @@
-from music import play_array
-import asyncio
+from music import play_array, find_max
+import random
 
 def merge(arr_1: list[int], arr_2: list[int]) -> list[int]:
     size1 = len(arr_1)
@@ -52,6 +52,11 @@ def msort(arr: list[int]) -> list[int]:
 
     return merge(segment1, segment2)
 
-test = [6, 5, 4, 3, 2, 1]
+test = []
 
-play_array(msort([6, 5, 4, 3, 2, 1]))
+
+for i in range(10):
+    test.append(random.randint(1, 100))
+    
+find_max(test)
+play_array(msort(test))
